@@ -50,7 +50,7 @@ class MyRecyclerViewAdapter(private var itemList: List<ResponseResult>) :
         val country = item.sys.country
         val city = item.name
         val temperature = round(item.main.temp).toInt().toString()
-        val humidity = item.main.humidity
+        val humidity = round(item.main.humidity).toInt().toString()
         val dateNumber = Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
         val dateText = dayOfTheWeek.today().name
         val context = holder.itemView.context
